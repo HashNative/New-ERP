@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World App</title>
+</head>
+<body>
+<h1>Login page</h1>
+
+<div>
+    <form class="form-group">
+        <label for="username">Username :</label>
+        <input id="username" name="username" type="text" placeholder="Enter username"><br><br>
+
+        <label for="password">Password :</label>
+        <input id="password" name="password" type="password" placeholder="Enter password"><br><br>
+
+        <input type="button" value="connect to mysql" id="login_btn"/>
+    </form>
+</div>
+</body>
+
+<script>
+    document.getElementById("login_btn").addEventListener("click", ()=>{
+
+        let mysql = require("mysql");
+
+        let connection = mysql.createConnection({
+            host: "localhost",
+            user: "root",
+            password: null,
+            database: "login_test_db"
+        });
+
+        connection.connect((err) => {
+            if (err) {
+                return console.log(err.stack);
+            }
+           // console.log("Connection successfully established");
+
+            let username1 = document.getElementById("username").value;
+            let password1 = document.getElementById("password").value;
+           
+            $queryString = "SELECT * FROM `table_db` WHERE username='" + username1+"' AND password='" + password1 + "'";
+            console.log( $queryString);
+            connection.query($queryString, (err, rows, fields) => {
+                if(err){
+                    return console.log("Problem detected in query.", err);
+                }
+                console.log(rows.length);
+                if(rows.length != 0){
+                    console.log("Login successful.");
+                    window.location = "homepage.html";
+                }else{
+                    console.log("Usernmae or password is incorrect.");
+                }
+            });
+
+            connection.end(() => {
+               // console.log("connection successfully closed.");
+            });
+
+        });
+
+    }, false);
+
+</script>
+</html>

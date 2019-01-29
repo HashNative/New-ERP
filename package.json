@@ -1,0 +1,17 @@
+{
+  "name": "login-test",
+  "version": "1.0.0",
+  "description": "Login test app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Lahiru Sandaruwan",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.2.1",
+    "electron": "^4.0.2",
+    "jQuery": "^1.7.4",
+    "mysql": "^2.16.0"
+  }
+}
