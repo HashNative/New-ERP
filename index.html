@@ -29,7 +29,7 @@
             host: "localhost",
             user: "root",
             password: null,
-            database: "login_test_db"
+            database: "login"
         });
 
         connection.connect((err) => {
@@ -41,7 +41,7 @@
             let username1 = document.getElementById("username").value;
             let password1 = document.getElementById("password").value;
            
-            $queryString = "SELECT * FROM `table_db` WHERE username='" + username1+"' AND password='" + password1 + "'";
+            $queryString = "SELECT * FROM `login` WHERE username='" + username1+"' AND password='" + password1 + "'";
             console.log( $queryString);
             connection.query($queryString, (err, rows, fields) => {
                 if(err){

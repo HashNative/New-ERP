@@ -1,0 +1,29 @@
+.h3{
+    text-align: center;
+    font-family: 'Times New Roman';
+    font-size: 13px;
+    float: left;
+}
+
+label{
+    text-align: left;
+    font-size: 11px;
+    float: left;
+}
+
+table{
+    align-content: center
+}
+
+.row{
+    text-align: left;
+    float: right;
+}
+
+#record_button{
+    align-items: center;
+}
+
+.dropdown{
+    align-content: left;
+}
