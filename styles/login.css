@@ -1,0 +1,47 @@
+.heading {
+    color: #005cbf;
+    margin: 10px;
+    font-family: Arial, fantasy;
+}
+
+.margin-remover {
+    margin: 0;
+}
+
+.padding-remover {
+    padding: 0;
+}
+
+.backstage-color {
+    color: #0c5460;
+}
+
+.center-align-text {
+    text-align: center;
+}
+
+.right-align-text {
+    text-align: right;
+}
+
+
+
+.login-form {
+    width: 340px;
+    margin: 50px auto;
+}
+.login-form form {
+    margin-bottom: 15px;
+    padding: 30px;
+}
+.login-form h2 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 2px;
+}
+.btn {
+    font-size: 15px;
+    font-weight: bold;
+}
