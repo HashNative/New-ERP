@@ -9,7 +9,7 @@ const url = require("url");
 let win;
 
 function createWindow() {
-    win = new BrowserWindow({ maxWidth: 800, maxHeight: 500 });
+    win = new BrowserWindow({ });
     win.loadURL(url.format({
         pathname: path.join(__dirname, 'index.html'),
         protocol: 'file',
